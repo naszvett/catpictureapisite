@@ -1,0 +1,55 @@
+:root {
+    --blue: #1e90ff;
+    --red: #ff0000;
+  }
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.main {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.header h1{
+    margin: 0 0 10px 0;
+}
+
+.header select {
+    font-size: 1rem;
+}
+
+.pictures {
+    flex: 1;
+    background-color: var(--blue);
+    position: relative;
+    overflow: hidden;
+}
+
+.picture {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    opacity: 0;
+    transform: scale(1);
+    transition: all .9s ease-out;
+}
+
+.picture:nth-last-child(2){
+    opacity: 1;
+    transform: scale(1.08);
+}
